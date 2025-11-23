@@ -15,3 +15,7 @@ export default function Home() {
     </main>
   );
 }
+
+// Force dynamic rendering + explicit route recognition (fixes 404 ghosts)
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
