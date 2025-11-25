@@ -14,12 +14,12 @@ export default function Home() {
         <div className="h-full max-w-7xl mx-auto px-6 flex items-center justify-between">
           <div className="flex items-center gap-3">
             {/* Logo matching the app */}
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="12" r="9" stroke="url(#globe-gradient-header)" strokeWidth="1.5" fill="none"/>
-              <ellipse cx="12" cy="12" rx="9" ry="4" stroke="url(#globe-gradient-header)" strokeWidth="1.5" fill="none" opacity="0.6"/>
-              <ellipse cx="12" cy="12" rx="9" ry="6.5" stroke="url(#globe-gradient-header)" strokeWidth="1.5" fill="none" opacity="0.4"/>
-              <path d="M 12 3 Q 7 12 12 21 Q 17 12 12 3" stroke="url(#globe-gradient-header)" strokeWidth="1.5" fill="none" opacity="0.6"/>
-              <circle cx="12" cy="12" r="1.5" fill="url(#globe-gradient-header)"/>
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="16" r="12" stroke="url(#globe-gradient-header)" strokeWidth="1.5" fill="none"/>
+              <ellipse cx="16" cy="16" rx="12" ry="5.5" stroke="url(#globe-gradient-header)" strokeWidth="1.25" fill="none" opacity="0.6"/>
+              <ellipse cx="16" cy="16" rx="12" ry="8.5" stroke="url(#globe-gradient-header)" strokeWidth="1.25" fill="none" opacity="0.4"/>
+              <path d="M 16 4 C 16 4 10.5 16 16 28 C 21.5 16 16 4 16 4" stroke="url(#globe-gradient-header)" strokeWidth="1.25" fill="none" opacity="0.6"/>
+              <circle cx="16" cy="16" r="2" fill="url(#globe-gradient-header)"/>
               <defs>
                 <linearGradient id="globe-gradient-header" x1="0%" y1="0%" x2="100%" y2="100%">
                   <stop offset="0%" stopColor="#3b82f6"/>
@@ -292,11 +292,12 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 py-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="12" r="9" stroke="url(#globe-gradient-footer)" strokeWidth="1.5" fill="none"/>
-                <ellipse cx="12" cy="12" rx="9" ry="4" stroke="url(#globe-gradient-footer)" strokeWidth="1.5" fill="none" opacity="0.6"/>
-                <path d="M 12 3 Q 7 12 12 21 Q 17 12 12 3" stroke="url(#globe-gradient-footer)" strokeWidth="1.5" fill="none" opacity="0.6"/>
-                <circle cx="12" cy="12" r="1.5" fill="url(#globe-gradient-footer)"/>
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="14" cy="14" r="10.5" stroke="url(#globe-gradient-footer)" strokeWidth="1.5" fill="none"/>
+                <ellipse cx="14" cy="14" rx="10.5" ry="4.5" stroke="url(#globe-gradient-footer)" strokeWidth="1.25" fill="none" opacity="0.6"/>
+                <ellipse cx="14" cy="14" rx="10.5" ry="7.5" stroke="url(#globe-gradient-footer)" strokeWidth="1.25" fill="none" opacity="0.4"/>
+                <path d="M 14 3.5 C 14 3.5 9 14 14 24.5 C 19 14 14 3.5 14 3.5" stroke="url(#globe-gradient-footer)" strokeWidth="1.25" fill="none" opacity="0.6"/>
+                <circle cx="14" cy="14" r="1.75" fill="url(#globe-gradient-footer)"/>
                 <defs>
                   <linearGradient id="globe-gradient-footer" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" stopColor="#3b82f6"/>

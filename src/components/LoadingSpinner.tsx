@@ -11,7 +11,7 @@ export default function LoadingSpinner({ size = 48, className = '' }: LoadingSpi
       <svg 
         width={size} 
         height={size} 
-        viewBox="0 0 24 24" 
+        viewBox="0 0 40 40" 
         fill="none" 
         xmlns="http://www.w3.org/2000/svg"
         className="animate-spin-slow"
@@ -21,29 +21,29 @@ export default function LoadingSpinner({ size = 48, className = '' }: LoadingSpi
       >
         {/* Globe circle */}
         <circle 
-          cx="12" 
-          cy="12" 
-          r="9" 
+          cx="20" 
+          cy="20" 
+          r="15" 
           stroke="url(#globe-gradient-loading)" 
-          strokeWidth="1.5" 
+          strokeWidth="2" 
           fill="none"
         />
         {/* Latitude lines */}
         <ellipse 
-          cx="12" 
-          cy="12" 
-          rx="9" 
-          ry="4" 
+          cx="20" 
+          cy="20" 
+          rx="15" 
+          ry="6.5" 
           stroke="url(#globe-gradient-loading)" 
           strokeWidth="1.5" 
           fill="none" 
           opacity="0.6"
         />
         <ellipse 
-          cx="12" 
-          cy="12" 
-          rx="9" 
-          ry="6.5" 
+          cx="20" 
+          cy="20" 
+          rx="15" 
+          ry="10.5" 
           stroke="url(#globe-gradient-loading)" 
           strokeWidth="1.5" 
           fill="none" 
@@ -51,7 +51,7 @@ export default function LoadingSpinner({ size = 48, className = '' }: LoadingSpi
         />
         {/* Longitude line */}
         <path 
-          d="M 12 3 Q 7 12 12 21 Q 17 12 12 3" 
+          d="M 20 5 C 20 5 13.5 20 20 35 C 26.5 20 20 5 20 5" 
           stroke="url(#globe-gradient-loading)" 
           strokeWidth="1.5" 
           fill="none" 
@@ -59,14 +59,14 @@ export default function LoadingSpinner({ size = 48, className = '' }: LoadingSpi
         />
         {/* Center dot */}
         <circle 
-          cx="12" 
-          cy="12" 
-          r="1.5" 
+          cx="20" 
+          cy="20" 
+          r="2.5" 
           fill="url(#globe-gradient-loading)"
         >
           <animate
             attributeName="r"
-            values="1.5;2.5;1.5"
+            values="2.5;3.5;2.5"
             dur="2s"
             repeatCount="indefinite"
           />

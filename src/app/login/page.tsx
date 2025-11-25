@@ -33,15 +33,15 @@ export default async function LoginPage({
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-3 mb-6">
             <div className="relative">
-              {/* Globe Logo - matching sidebar */}
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="12" r="9" stroke="url(#globe-gradient)" strokeWidth="1.5" fill="none"/>
-                <ellipse cx="12" cy="12" rx="9" ry="4" stroke="url(#globe-gradient)" strokeWidth="1.5" fill="none" opacity="0.6"/>
-                <ellipse cx="12" cy="12" rx="9" ry="6.5" stroke="url(#globe-gradient)" strokeWidth="1.5" fill="none" opacity="0.4"/>
-                <path d="M 12 3 Q 7 12 12 21 Q 17 12 12 3" stroke="url(#globe-gradient)" strokeWidth="1.5" fill="none" opacity="0.6"/>
-                <circle cx="12" cy="12" r="1.5" fill="url(#globe-gradient)"/>
+              {/* Globe Logo - High Resolution */}
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="18" stroke="url(#globe-gradient-login)" strokeWidth="2" fill="none"/>
+                <ellipse cx="24" cy="24" rx="18" ry="8" stroke="url(#globe-gradient-login)" strokeWidth="1.5" fill="none" opacity="0.6"/>
+                <ellipse cx="24" cy="24" rx="18" ry="13" stroke="url(#globe-gradient-login)" strokeWidth="1.5" fill="none" opacity="0.4"/>
+                <path d="M 24 6 C 24 6 16 24 24 42 C 32 24 24 6 24 6" stroke="url(#globe-gradient-login)" strokeWidth="1.5" fill="none" opacity="0.6"/>
+                <circle cx="24" cy="24" r="2.5" fill="url(#globe-gradient-login)"/>
                 <defs>
-                  <linearGradient id="globe-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <linearGradient id="globe-gradient-login" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" stopColor="#3b82f6"/>
                     <stop offset="100%" stopColor="#06b6d4"/>
                   </linearGradient>

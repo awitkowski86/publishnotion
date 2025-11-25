@@ -40,12 +40,12 @@ export default function AppSidebar({ workspace, role }: AppSidebarProps) {
       >
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           {/* Globe circle */}
-          <circle cx="12" cy="12" r="9" stroke="url(#globe-gradient)" strokeWidth="1.5" fill="none"/>
+          <circle cx="12" cy="12" r="9" stroke="url(#globe-gradient)" strokeWidth="1.25" fill="none"/>
           {/* Latitude lines */}
-          <ellipse cx="12" cy="12" rx="9" ry="4" stroke="url(#globe-gradient)" strokeWidth="1.5" fill="none" opacity="0.6"/>
-          <ellipse cx="12" cy="12" rx="9" ry="6.5" stroke="url(#globe-gradient)" strokeWidth="1.5" fill="none" opacity="0.4"/>
+          <ellipse cx="12" cy="12" rx="9" ry="4" stroke="url(#globe-gradient)" strokeWidth="1" fill="none" opacity="0.6"/>
+          <ellipse cx="12" cy="12" rx="9" ry="6.5" stroke="url(#globe-gradient)" strokeWidth="1" fill="none" opacity="0.4"/>
           {/* Longitude line */}
-          <path d="M 12 3 Q 7 12 12 21 Q 17 12 12 3" stroke="url(#globe-gradient)" strokeWidth="1.5" fill="none" opacity="0.6"/>
+          <path d="M 12 3 C 12 3 8 12 12 21 C 16 12 12 3 12 3" stroke="url(#globe-gradient)" strokeWidth="1" fill="none" opacity="0.6"/>
           {/* Center dot */}
           <circle cx="12" cy="12" r="1.5" fill="url(#globe-gradient)"/>
           {/* Gradient definition */}
