@@ -4,13 +4,16 @@ import EmailProvider from 'next-auth/providers/email'
 import { PrismaAdapter } from '@next-auth/prisma-adapter'
 import { prisma } from '@/lib/prisma'
 
-export const authOptions: NextAuthOptions = {
-  adapter: PrismaAdapter(prisma),
-  providers: [
-    GithubProvider({
-      clientId: process.env.GITHUB_CLIENT_ID || process.env.GITHUB_ID || '',
-      clientSecret: process.env.GITHUB_CLIENT_SECRET || process.env.GITHUB_SECRET || '',
-    }),
+const providers = [
+  GithubProvider({
+    clientId: process.env.GITHUB_CLIENT_ID || process.env.GITHUB_ID || '',
+    clientSecret: process.env.GITHUB_CLIENT_SECRET || process.env.GITHUB_SECRET || '',
+  }),
+];
+
+// Only add email provider if configured
+if (process.env.EMAIL_SERVER_HOST) {
+  providers.push(
     EmailProvider({
       server: {
         host: process.env.EMAIL_SERVER_HOST,
@@ -21,8 +24,13 @@ export const authOptions: NextAuthOptions = {
         },
       },
       from: process.env.EMAIL_FROM,
-    }),
-  ],
+    })
+  );
+}
+
+export const authOptions: NextAuthOptions = {
+  adapter: PrismaAdapter(prisma),
+  providers,
   pages: {
     signIn: '/login',
   },
@@ -37,6 +45,7 @@ export const authOptions: NextAuthOptions = {
   session: {
     strategy: 'database',
   },
+  debug: true, // Enable debug logs
 }
 
 const handler = NextAuth(authOptions)
