@@ -33,6 +33,7 @@ export const authOptions: NextAuthOptions = {
   providers,
   pages: {
     signIn: '/login',
+    error: '/login', // Error page
   },
   callbacks: {
     async session({ session, user }) {
@@ -46,6 +47,25 @@ export const authOptions: NextAuthOptions = {
     strategy: 'database',
   },
   debug: true, // Enable debug logs
+  events: {
+    async signIn(message) {
+      console.log('SignIn event:', message)
+    },
+    async createUser(message) {
+      console.log('CreateUser event:', message)
+    },
+  },
+  logger: {
+    error(code, metadata) {
+      console.error('NextAuth error:', code, metadata)
+    },
+    warn(code) {
+      console.warn('NextAuth warning:', code)
+    },
+    debug(code, metadata) {
+      console.log('NextAuth debug:', code, metadata)
+    },
+  },
 }
 
 const handler = NextAuth(authOptions)
