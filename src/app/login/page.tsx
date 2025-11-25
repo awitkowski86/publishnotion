@@ -1,13 +1,26 @@
 import { redirect } from 'next/navigation'
 import { getCurrentUserAndWorkspace } from '@/lib/auth'
 
-export default async function LoginPage() {
+export default async function LoginPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ error?: string; callbackUrl?: string }>
+}) {
+  const params = await searchParams
   const context = await getCurrentUserAndWorkspace()
   
   // If already authenticated and has workspace, redirect to app
   if (context) {
     redirect('/app')
   }
+
+  const errorMessages: Record<string, string> = {
+    github: 'GitHub authentication failed. Please try again.',
+    email: 'Email authentication failed. Please try again.',
+    default: 'Authentication failed. Please try again.',
+  }
+
+  const errorMessage = params.error ? errorMessages[params.error] || errorMessages.default : null
 
 
   return (
@@ -64,6 +77,17 @@ export default async function LoginPage() {
           borderColor: 'var(--border-primary)',
           boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4)'
         }}>
+          {/* Error Message */}
+          {errorMessage && (
+            <div className="mb-4 p-4 rounded-lg" style={{
+              backgroundColor: 'rgba(239, 68, 68, 0.1)',
+              borderLeft: '4px solid rgb(239, 68, 68)',
+              color: 'rgb(239, 68, 68)'
+            }}>
+              <p className="text-sm font-medium">{errorMessage}</p>
+            </div>
+          )}
+          
           <div className="space-y-4">
             {/* GitHub Sign In */}
             <a
